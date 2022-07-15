@@ -87,7 +87,7 @@ export default function Create() {
          />
        </div>
        <div className="form-group">
-         <label htmlFor="duration">Duration: </label>
+         <label htmlFor="duration">Duration: (Optional)</label>
          <input
            type="text"
            className="form-control"
