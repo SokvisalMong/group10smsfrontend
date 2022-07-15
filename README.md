@@ -14,7 +14,7 @@ Members:
   
   Pichmonyreadh chau
 
-## Script to start
+## Script to start or connect to the website at https://group10smsfrontend.vercel.app/
 
 1. Install all dependencies used in the project.
 
