@@ -1,0 +1,64 @@
+.center_page {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .welcome_text {
+    font-size: 50px;
+  }
+
+  .bottom_text {
+    font-size: 30px;
+  }
+
+  .bottom_text1  {
+    font-size: 25px;
+  }
+
+  .center_page1 {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .center_page2 {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .center_page3 {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+  }
+  .center_page4 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .center_page5 {
+    height: 110%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+  }
