@@ -22,7 +22,7 @@ export default function Create() {
    // When a post request is sent to the create url, we'll add a new record to the database.
    const newDepartment = { ...form };
  
-   await fetch("https://group10smsbackend.vercel.app/department/create", {
+   await fetch("https://group10smsbackend-jkbr8ai6g-smong-paragoniued.vercel.app/department/create", {
      method: "POST",
      headers: {
        "Content-Type": "application/json",

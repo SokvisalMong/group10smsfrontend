@@ -29,7 +29,7 @@ const Staff = (props) => (
     // This method fetches the records from the database.
     useEffect(() => {
       async function getStaffs() {
-        const response = await fetch(`https://group10smsbackend.vercel.app/staff/`);
+        const response = await fetch(`https://group10smsbackend-jkbr8ai6g-smong-paragoniued.vercel.app/staff/`);
     
         if (!response.ok) {
           const message = `An error occurred: ${response.statusText}`;
@@ -48,7 +48,7 @@ const Staff = (props) => (
     
     // This method will delete a record
     async function deleteStaff(id) {
-      const response = await fetch(`https://group10smsbackend.vercel.app/staff/${id}`);
+      const response = await fetch(`https://group10smsbackend-jkbr8ai6g-smong-paragoniued.vercel.app/staff/${id}`);
 
       if (!response.ok) {
         const message = `An error has occured: ${response.statusText}`;
@@ -65,7 +65,7 @@ const Staff = (props) => (
 
       const iid = tempStaff.staff_id;
       
-      const iresponse = await fetch(`https://group10smsbackend.vercel.app/information/staff_id/${iid}`);
+      const iresponse = await fetch(`https://group10smsbackend-jkbr8ai6g-smong-paragoniued.vercel.app/information/staff_id/${iid}`);
       if (!iresponse.ok) {
         const message = `error occured can't be fucked`;
         window.alert(message);
@@ -79,11 +79,11 @@ const Staff = (props) => (
         return;
       }
 
-      await fetch(`https://group10smsbackend.vercel.app/information/delete/${tempInfo._id}`, {
+      await fetch(`https://group10smsbackend-jkbr8ai6g-smong-paragoniued.vercel.app/information/delete/${tempInfo._id}`, {
         method: "DELETE"
       });
 
-      await fetch(`https://group10smsbackend.vercel.app/staff/delete/${id}`, {
+      await fetch(`https://group10smsbackend-jkbr8ai6g-smong-paragoniued.vercel.app/staff/delete/${id}`, {
         method: "DELETE"
       });
 
