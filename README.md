@@ -2,7 +2,7 @@
 
 This project was created using the MERN stack: MongoDB, ExpressJs, React, and NodeJs.
 
-## Script to start
+## Script to start frontend website
 
 1. Install all dependencies used in the project.
 
