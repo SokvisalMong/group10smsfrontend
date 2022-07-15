@@ -6,8 +6,6 @@ export default function Create() {
   project_id: "",
   project_name: "",
   start: "",
-  end: "",
-  duration: ""
  });
  const navigate = useNavigate();
  
@@ -74,26 +72,6 @@ export default function Create() {
            id="start"
            value={form.start}
            onChange={(e) => updateForm({ start: e.target.value })}
-         />
-       </div>
-       <div className="form-group">
-         <label htmlFor="end">End Date: (Please write in date format: mm/dd/yyyy)</label>
-         <input
-           type="text"
-           className="form-control"
-           id="end"
-           value={form.end}
-           onChange={(e) => updateForm({ end: e.target.value })}
-         />
-       </div>
-       <div className="form-group">
-         <label htmlFor="duration">Duration: (Optional)</label>
-         <input
-           type="text"
-           className="form-control"
-           id="duration"
-           value={form.duration}
-           onChange={(e) => updateForm({ duration: e.target.value })}
          />
        </div>
        <br />
