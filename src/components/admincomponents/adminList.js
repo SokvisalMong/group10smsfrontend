@@ -27,7 +27,7 @@ const Admin = (props) => (
     // This method fetches the admins from the database.
     useEffect(() => {
       async function getAdmins() {
-        const response = await fetch(`http://localhost:5000/admin/`);
+        const response = await fetch(`https://g10sms.herokuapp.com/admin/`);
     
         if (!response.ok) {
           const message = `An error occurred: ${response.statusText}`;
@@ -46,7 +46,7 @@ const Admin = (props) => (
     
     // This method will delete a admin
     async function deleteAdmin(id) {
-      await fetch(`http://localhost:5000/admin/delete/${id}`, {
+      await fetch(`https://g10sms.herokuapp.com/admin/delete/${id}`, {
         method: "DELETE"
       });
     

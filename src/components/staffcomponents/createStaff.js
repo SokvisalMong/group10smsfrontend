@@ -24,7 +24,7 @@ export default function Create() {
    // When a post request is sent to the create url, we'll add a new record to the database.
    const newStaff = { ...form };
  
-   await fetch("http://localhost:5000/staff/create", {
+   await fetch("https://g10sms.herokuapp.com/staff/create", {
      method: "POST",
      headers: {
        "Content-Type": "application/json",
@@ -36,7 +36,7 @@ export default function Create() {
      return;
    });
 
-   await fetch("http://localhost:5000/information/create", {
+   await fetch("https://g10sms.herokuapp.com/information/create", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

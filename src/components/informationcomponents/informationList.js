@@ -29,7 +29,7 @@ const Information = (props) => (
     // This method fetches the information from the database.
     useEffect(() => {
       async function getInformations() {
-        const response = await fetch(`http://localhost:5000/information/`);
+        const response = await fetch(`https://g10sms.herokuapp.com/information/`);
     
         if (!response.ok) {
           const message = `An error occurred: ${response.statusText}`;
@@ -48,7 +48,7 @@ const Information = (props) => (
     
     // This method will delete a information
     async function deleteInformation(id) {
-      await fetch(`http://localhost:5000/information/delete/${id}`, {
+      await fetch(`https://g10sms.herokuapp.com/information/delete/${id}`, {
         method: "DELETE"
       });
     
