@@ -14,7 +14,7 @@ export default function Edit() {
  useEffect(() => {
    async function fetchData() {
      const id = params.id.toString();
-     const response = await fetch(`https://group10smsbackend-jkbr8ai6g-smong-paragoniued.vercel.app/staff/${params.id.toString()}`);
+     const response = await fetch(`http://localhost:5000/staff/${params.id.toString()}`);
  
      if (!response.ok) {
        const message = `An error has occurred: ${response.statusText}`;
@@ -54,7 +54,7 @@ export default function Edit() {
    };
  
    // This will send a post request to update the data in the database.
-   await fetch(`https://group10smsbackend-jkbr8ai6g-smong-paragoniued.vercel.app/staff/update/${params.id}`, {
+   await fetch(`http://localhost:5000/staff/update/${params.id}`, {
      method: "POST",
      body: JSON.stringify(editedStaff),
      headers: {
@@ -110,6 +110,10 @@ export default function Edit() {
            className="btn btn-primary"
          />
        </div>
+       <br />
+       <form action="/staffcomponents/staffList" >
+          <input type="submit" value="Cancel" className="btn btn-primary"/>
+        </form>
      </form>
    </div>
  );

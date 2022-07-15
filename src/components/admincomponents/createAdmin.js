@@ -24,7 +24,7 @@ export default function Create() {
    // When a post request is sent to the create url, we'll add a new record to the database.
    const newAdmin = { ...form };
  
-   await fetch("https://group10smsbackend-jkbr8ai6g-smong-paragoniued.vercel.app/admin/create", {
+   await fetch("http://localhost:5000/admin/create", {
      method: "POST",
      headers: {
        "Content-Type": "application/json",
@@ -94,6 +94,10 @@ export default function Create() {
            className="btn btn-primary"
          />
        </div>
+       <br />
+       <form action="/admincomponents/adminList" >
+          <input type="submit" value="Cancel" className="btn btn-primary"/>
+        </form>
      </form>
    </div>
  );

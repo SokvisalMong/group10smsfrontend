@@ -14,7 +14,7 @@ export default function Edit() {
 		async function fetchData() {
 			const id = params.id.toString();
 			const response = await fetch(
-				`https://group10smsbackend-jkbr8ai6g-smong-paragoniued.vercel.app/department/${params.id.toString()}`
+				`http://localhost:5000/department/${params.id.toString()}`
 			);
 
 			if (!response.ok) {
@@ -51,7 +51,7 @@ export default function Edit() {
 			staff: Number(form.newStaff),
 		};
 		// This will send a post request to update the data in the database.
-		await fetch(`https://group10smsbackend-jkbr8ai6g-smong-paragoniued.vercel.app/department/push/${params.id}`, {
+		await fetch(`http://localhost:5000/department/push/${params.id}`, {
 			method: "POST",
 			body: JSON.stringify(thing),
 			headers: {
@@ -77,9 +77,14 @@ export default function Edit() {
 						onChange={(e) => updateForm({ newStaff: e.target.value })}
 					/>
 				</div>
+				<br />
 				<div className="form-group">
 					<input type="submit" value="Add Staff" className="btn btn-primary" />
 				</div>
+				<br />
+				<form action="/departmentcomponents/departmentList" >
+         			<input type="submit" value="Cancel" className="btn btn-primary"/>
+        		</form>
 			</form>
 		</div>
 	);

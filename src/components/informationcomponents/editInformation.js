@@ -15,7 +15,7 @@ export default function Edit() {
  useEffect(() => {
    async function fetchData() {
      const id = params.id.toString();
-     const response = await fetch(`https://group10smsbackend-jkbr8ai6g-smong-paragoniued.vercel.app/information/${params.id.toString()}`);
+     const response = await fetch(`http://localhost:5000/information/${params.id.toString()}`);
  
      if (!response.ok) {
        const message = `An error has occurred: ${response.statusText}`;
@@ -65,7 +65,7 @@ export default function Edit() {
    };
  
    // This will send a post request to update the data in the database.
-   await fetch(`https://group10smsbackend-jkbr8ai6g-smong-paragoniued.vercel.app/information/update/${params.id}`, {
+   await fetch(`http://localhost:5000/information/update/${params.id}`, {
      method: "POST",
      body: JSON.stringify(editedInformation),
      headers: {
@@ -74,7 +74,7 @@ export default function Edit() {
    });
 
    const id = params.id.toString();
-   const response = await fetch(`https://group10smsbackend-jkbr8ai6g-smong-paragoniued.vercel.app/information/${params.id.toString()}`);
+   const response = await fetch(`http://localhost:5000/information/${params.id.toString()}`);
 
    if (!response.ok) {
     const message = `An error has occured1: ${response.statusText}`;
@@ -89,7 +89,7 @@ export default function Edit() {
    }
 
    const sid = information.staff_id;
-   const sresponse = await fetch(`https://group10smsbackend-jkbr8ai6g-smong-paragoniued.vercel.app/staff/staff_id/${sid}`);
+   const sresponse = await fetch(`http://localhost:5000/staff/staff_id/${sid}`);
    if (!sresponse.ok) {
     const message = `An error has occured69: ${sresponse.statusText}`;
     window.alert(message);
@@ -109,7 +109,7 @@ export default function Edit() {
  // This following section will display the form that takes input from the user to update the data.
  return (
   <div>
-    <h3>Update Information</h3>
+    <h3>Update Information of Staff ID: {form.staff_id}</h3>
     <form onSubmit={onSubmit}>
       <div className="form-group">
         <label htmlFor="first_name">First Name: </label>
@@ -157,10 +157,14 @@ export default function Edit() {
       <div className="form-group">
         <input
           type="submit"
-          value="Update Record"
+          value="Update Information"
           className="btn btn-primary"
         />
       </div>
+      <br />
+      <form action="/informationcomponents/informationList" >
+          <input type="submit" value="Cancel" className="btn btn-primary"/>
+        </form>
     </form>
   </div>
 );

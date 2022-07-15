@@ -24,7 +24,7 @@ export default function Create() {
    // When a post request is sent to the create url, we'll add a new record to the database.
    const newInformation = { ...form };
  
-   await fetch("https://group10smsbackend-jkbr8ai6g-smong-paragoniued.vercel.app/information/create", {
+   await fetch("http://localhost:5000/information/create", {
      method: "POST",
      headers: {
        "Content-Type": "application/json",
@@ -85,6 +85,7 @@ export default function Create() {
            onChange={(e) => updateForm({ age: e.target.value })}
          />
        </div>
+       <br />
         <div className="form-group">
          <input
            type="submit"
@@ -92,6 +93,10 @@ export default function Create() {
            className="btn btn-primary"
          />
        </div>
+       <br />
+       <form action="/informationcomponents/informationList" >
+          <input type="submit" value="Cancel" className="btn btn-primary"/>
+        </form>
      </form>
    </div>
  );

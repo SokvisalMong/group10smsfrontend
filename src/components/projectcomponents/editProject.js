@@ -15,7 +15,7 @@ export default function Edit() {
  useEffect(() => {
    async function fetchData() {
      const id = params.id.toString();
-     const response = await fetch(`https://group10smsbackend-jkbr8ai6g-smong-paragoniued.vercel.app/project/${params.id.toString()}`);
+     const response = await fetch(`http://localhost:5000/project/${params.id.toString()}`);
  
      if (!response.ok) {
        const message = `An error has occurred: ${response.statusText}`;
@@ -63,7 +63,7 @@ export default function Edit() {
    };
  
    // This will send a post request to update the data in the database.
-   await fetch(`https://group10smsbackend-jkbr8ai6g-smong-paragoniued.vercel.app/project/update/${params.id}`, {
+   await fetch(`http://localhost:5000/project/update/${params.id}`, {
      method: "POST",
      body: JSON.stringify(editedProject),
      headers: {
@@ -100,7 +100,7 @@ export default function Edit() {
          />
        </div>
        <div className="form-group">
-         <label htmlFor="start">Starting Date: </label>
+         <label htmlFor="start">Starting Date: (Please write in date format: mm/dd/yyyy)</label>
           <input
            type="text"
            className="form-control"
@@ -111,7 +111,7 @@ export default function Edit() {
           
        </div>
        <div className="form-group">
-         <label htmlFor="end">End Date:</label>
+         <label htmlFor="end">End Date: (Please write in date format: mm/dd/yyyy)</label>
          <input
            type="text"
            className="form-control"
@@ -129,6 +129,10 @@ export default function Edit() {
            className="btn btn-primary"
          />
        </div>
+       <br />
+       <form action="/projectcomponents/projectList" >
+          <input type="submit" value="Cancel" className="btn btn-primary"/>
+        </form>
      </form>
    </div>
  );

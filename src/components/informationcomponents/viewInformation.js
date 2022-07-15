@@ -21,7 +21,7 @@ import { useParams, useNavigate} from "react-router";
     useEffect(() => {
       async function fetchData() {
         const id = params.id.toString();
-        const response = await fetch(`https://group10smsbackend-jkbr8ai6g-smong-paragoniued.vercel.app/staff/${params.id.toString()}`);
+        const response = await fetch(`http://localhost:5000/staff/${params.id.toString()}`);
 
         if (!response.ok) {
           const message = `An error has occured1: ${response.statusText}`;
@@ -37,7 +37,7 @@ import { useParams, useNavigate} from "react-router";
 
         const iid = staff.staff_id;
 
-        const iresponse = await fetch(`https://group10smsbackend-jkbr8ai6g-smong-paragoniued.vercel.app/information/staff_id/${iid}`);
+        const iresponse = await fetch(`http://localhost:5000/information/staff_id/${iid}`);
         if (!iresponse.ok) {
           const message = `An error has occured2: ${iresponse.statusText}`;
           window.alert(message);
