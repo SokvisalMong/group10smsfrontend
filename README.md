@@ -5,9 +5,13 @@ This project was created using the MERN stack: MongoDB, ExpressJs, React, and No
 Topic: Staff Management System
 
 Members:
+
   Sokvisal Mong
+  
   Sivtheng Chang
+  
   Vinnchay Sea
+  
   Pichmonyreadh chau
 
 ## Script to start
