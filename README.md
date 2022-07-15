@@ -1,8 +1,13 @@
 # CS 321 Database Management
-
 This project was created using the MERN stack: MongoDB, ExpressJs, React, and NodeJs.
+Topic: Staff Management System
+Members:
+  Sokvisal Mong
+  Sivtheng Chang
+  Vinnchay Sea
+  Pichmonyreadh chau
 
-## Script to start frontend website
+## Script to start
 
 1. Install all dependencies used in the project.
 
