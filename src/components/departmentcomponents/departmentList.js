@@ -34,7 +34,7 @@ export default function DepartmentList() {
 	// This method fetches the records from the database.
 	useEffect(() => {
 		async function getDepartments() {
-			const response = await fetch(`http://localhost:5000/department/`);
+			const response = await fetch(`https://group10smsbackend.vercel.app/department/`);
 
 			if (!response.ok) {
 				const message = `An error occurred: ${response.statusText}`;
@@ -53,7 +53,7 @@ export default function DepartmentList() {
 
 	// This method will delete a department
 	async function deleteDepartment(id) {
-		await fetch(`http://localhost:5000/department/delete/${id}`, {
+		await fetch(`https://group10smsbackend.vercel.app/department/delete/${id}`, {
 			method: "DELETE",
 		});
 

@@ -31,7 +31,7 @@ const Project = (props) => (
     // This method fetches the records from the database.
     useEffect(() => {
       async function getProjects() {
-        const response = await fetch(`http://localhost:5000/project/`);
+        const response = await fetch(`https://group10smsbackend.vercel.app/project/`);
     
         if (!response.ok) {
           const message = `An error occurred: ${response.statusText}`;
@@ -50,7 +50,7 @@ const Project = (props) => (
     
     // This method will delete a record
     async function deleteProject(id) {
-      await fetch(`http://localhost:5000/project/delete/${id}`, {
+      await fetch(`https://group10smsbackend.vercel.app/project/delete/${id}`, {
         method: "DELETE"
       });
     
