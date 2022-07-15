@@ -68,7 +68,7 @@ export default function Edit() {
  // This following section will display the form that takes input from the user to update the data.
  return (
    <div>
-     <h3>Update Admin</h3>
+     <h3>Update Admin {form.admin_id} : {form.username}</h3>
      <form onSubmit={onSubmit}>
        <div className="form-group">
          <label htmlFor="admin_id">Admin ID: </label>
