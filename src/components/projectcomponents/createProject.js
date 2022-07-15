@@ -67,7 +67,7 @@ export default function Create() {
          />
        </div>
        <div className="form-group">
-         <label htmlFor="start">Starting Date: </label>
+         <label htmlFor="start">Starting Date: (Please write in date format: mm/dd/yyyy)</label>
          <input
            type="text"
            className="form-control"
@@ -77,7 +77,7 @@ export default function Create() {
          />
        </div>
        <div className="form-group">
-         <label htmlFor="end">End Date: </label>
+         <label htmlFor="end">End Date: (Please write in date format: mm/dd/yyyy)</label>
          <input
            type="text"
            className="form-control"
