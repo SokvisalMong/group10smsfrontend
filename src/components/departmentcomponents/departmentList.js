@@ -53,7 +53,7 @@ export default function DepartmentList() {
 
 	// This method will delete a department
 	async function deleteDepartment(id) {
-		await fetch(`https://g10sms.herokuapp.com/delete/${id}`, {
+		await fetch(`https://g10sms.herokuapp.com/department/delete/${id}`, {
 			method: "DELETE",
 		});
 
